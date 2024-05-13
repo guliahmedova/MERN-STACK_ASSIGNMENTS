@@ -13,12 +13,23 @@ const createBrand = async (req, res) => {
     generateRes(res, 201, addnewrecord);
 };
 
-const deleteBrand = async (req, res) => {
-     
+const updateBrand = async (req, res) => {
+    const { url } = req;
+    const newUrl = url.split("/")[2];
+    const brandId = newUrl?.replace("/", "");
+
+    const body = await parseRequestBody(req);
+    const updatedBrand = await brandServ.updateBrand(brandId, body);
+
+    if (updatedBrand) {
+        generateResponse(res, 200, updatedBrand);
+    } else {
+        generateResponse(res, 404, { message: "Brand is not found!" });
+    }
 };
 
 module.exports = {
     getBrandInfo,
     createBrand,
-    deleteBrand
+    updateBrand
 };

@@ -25,21 +25,33 @@ async function createBrand(brand) {
     };
 
     myalldata.brands.push(newBrand);
-
     await writeFileAsync(dbpath, JSON.stringify(myalldata, null, 2));
     return newBrand
 };
 
-async function deleteBrand(brandId) {
+async function updateBrand(id, brand) {
     const result = await readFileAsync(dbpath);
-    const myalldata = JSON.parse(result);
-    const newBrands = myalldata.filter((br) => br.id != brandId);
-    await writeFileAsync(dbpath, JSON.stringify(newBrands, null, 2));
-    return newBrands;
+    const allData = JSON.parse(result);
+    const existBrand = brand;
+
+    allData.brands.map((brand) => {
+        if (brand.id === id) {
+            brand.title = existBrand.title;
+        }
+    });
+
+    await writeFileAsync(dbpath, JSON.stringify(allData, null, 2));
+    const updatedBrand = allData.brands.find((brand) => brand.id === id);
+
+    if (updatedBrand) {
+        return updatedBrand;
+    } else {
+        throw new Error("Brand is not found!");
+    }
 };
 
 module.exports = {
     getBrand,
     createBrand,
-    deleteBrand
+    updateBrand
 };

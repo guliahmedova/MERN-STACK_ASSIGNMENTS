@@ -16,6 +16,10 @@ const handleBrandRoutes = (req, res) => {
         case HTTP_METHODS.DELETE:
             brandController.deleteBrand(req, res);
             break;
+
+        case HTTP_METHODS.PUT:
+            brandController.updateBrand(req, res);
+            break;
     }
 };
 
