@@ -1,0 +1,19 @@
+{
+    "questions": [
+        {
+            "id": "1",
+            "question": "question 1",
+            "answer": "answer 1"
+        }
+    ],
+
+    "about": [
+        {
+            "id": "11",
+            "fullname": "ahmeodova",
+            "age": "22",
+            "gender": "female",
+            "profession": "frontend"
+        }
+    ]
+}
