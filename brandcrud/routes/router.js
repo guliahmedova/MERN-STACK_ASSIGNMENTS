@@ -5,7 +5,9 @@ const generateRes = require('../helpers/resGenerator');
 const handleRoutes = (req, res) => {
     const { url } = req;
 
-    switch (url) {
+    let newUrl = `/${url.split('/')[1]}`
+
+    switch (newUrl) {
         case ENDPOINTS.DEFAULT_ENDPOINT:
             console.log("home page");
             break;
