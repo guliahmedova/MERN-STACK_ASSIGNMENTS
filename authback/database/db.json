@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "fullName": "guli ahmedova",
+      "userName": "guli",
+      "email": "guli@gmail.com",
+      "password": "guli2001",
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "email": "tris123@gmail.com",
+      "fullName": "Gulu ahmedoba",
+      "userName": "tris123",
+      "password": "$2b$10$ddTEQVbaw/r2doY2GSRXWOvesqf7ZrzMAIrPVRJd0pxPmCTxA/0.W",
+      "isActive": true
+    }
+  ]
+}
