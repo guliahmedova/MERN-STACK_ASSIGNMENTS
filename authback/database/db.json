@@ -3,17 +3,17 @@
     {
       "id": "1",
       "fullName": "guli ahmedova",
-      "userName": "guli",
+      "userName": "guli2001",
       "email": "guli@gmail.com",
-      "password": "guli2001",
+      "password": "Guli2001@",
       "isActive": true
     },
     {
       "id": "2",
       "email": "tris123@gmail.com",
-      "fullName": "Gulu ahmedoba",
-      "userName": "tris123",
-      "password": "$2b$10$ddTEQVbaw/r2doY2GSRXWOvesqf7ZrzMAIrPVRJd0pxPmCTxA/0.W",
+      "fullName": "tris smith",
+      "userName": "Tris123",
+      "password": "$2b$10$9EQYiIZ2tBrw6YMAhcVEOOk2PkoxZFZgmbBPsNdYudFbvU.0kBsHO",
       "isActive": true
     }
   ]

@@ -16,7 +16,6 @@ const handleRoutes = (req, res) => {
             break;
         default:
             generateRes(res, 404, { "message": "error" });
-            break;
     }
 };
 

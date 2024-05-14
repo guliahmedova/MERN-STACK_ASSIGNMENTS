@@ -17,7 +17,7 @@ async function getAllJsonData() {
 };
 
 async function getData(key) {
-    const allData = getAllJsonData();
+    const allData = await getAllJsonData();
     return allData[key];
 };
 

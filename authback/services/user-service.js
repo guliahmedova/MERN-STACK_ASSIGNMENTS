@@ -69,7 +69,7 @@ async function verifyUser(user) {
     };
     if (!existUser.isActive) {
         return new result.ErrorResult(USER_IS_BLOCK);
-    }
+    };
 
     return new result.SuccessResult(USER_LOGIN_COMPLETE);
 };
