@@ -28,7 +28,7 @@ async function addUser(model) {
     const saltKey = await bcyrpt.genSalt(saltRounds);
     model.password = await bcyrpt.hash(model.password, saltKey);
 
-    const data = baseService.insertData(JSON_MODEL_KEYS.USERS, model);
+    const data = await baseService.insertData(JSON_MODEL_KEYS.USERS, model);
     return new result.SuccessResult(DATA_ADDED_SUCCESSFULLY, data);
 };
 

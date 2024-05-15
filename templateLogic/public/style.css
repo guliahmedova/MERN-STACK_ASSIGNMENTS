@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    background-color: pink;
+}
+
+main {
+    width: 100%;
+    background-color: palevioletred;
+}
+
+footer {
+    width: 100%;
+    background-color: darkmagenta;
+}

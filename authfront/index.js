@@ -35,6 +35,8 @@ async function register(e) {
 async function login(e) {
     e.preventDefault();
 
+    console.log("-", loginUsername.value, loginPassword.value);
+
     const user = {
         userName: loginUsername.value,
         password: loginPassword.value,

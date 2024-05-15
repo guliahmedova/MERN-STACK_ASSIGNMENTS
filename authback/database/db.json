@@ -1,19 +1,19 @@
 {
   "users": [
     {
-      "id": "1",
-      "fullName": "guli ahmedova",
-      "userName": "guli2001",
-      "email": "guli@gmail.com",
-      "password": "Guli2001@",
-      "isActive": true
-    },
-    {
       "id": "2",
       "email": "tris123@gmail.com",
       "fullName": "tris smith",
       "userName": "Tris123",
       "password": "$2b$10$9EQYiIZ2tBrw6YMAhcVEOOk2PkoxZFZgmbBPsNdYudFbvU.0kBsHO",
+      "isActive": true
+    },
+    {
+      "id": "3",
+      "email": "guliehmedova19@gmail.com",
+      "fullName": "Gulu ahmedoba",
+      "userName": "gulu2001",
+      "password": "$2b$10$Iho2nUeX0TcVm6dQegE9aOWqn84q1rX96fnVrktK9/k1NLKQMPrmS",
       "isActive": true
     }
   ]
