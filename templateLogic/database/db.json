@@ -7,7 +7,7 @@
             "author": "Dr. Jane Smith",
             "date": "15 May 2024",
             "comments": "45",
-            "img": "https://www.google.com/imgres?q=employe%20image&imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Femploye-customer-service-support-working-office-professional-online-telephone-assistant-97410941.jpg&imgrefurl=https%3A%2F%2Fwww.dreamstime.com%2Fphotos-images%2Foffice-employe.html&docid=hZ8OUwqyPxK_bM&tbnid=v8nuKsD0tcAl1M&vet=12ahUKEwiEr4bchZeGAxXsVfEDHYNfDcEQM3oECB0QAA..i&w=800&h=534&hcb=2&itg=1&ved=2ahUKEwiEr4bchZeGAxXsVfEDHYNfDcEQM3oECB0QAA"
+            "img": "/images/img1.png"
         },
         {
             "id": "2",
@@ -16,7 +16,7 @@
             "author": "John Green",
             "date": "22 April 2024",
             "comments": "30",
-            "img": "https://www.google.com/imgres?q=employe%20image&imgurl=https%3A%2F%2Fst2.depositphotos.com%2F2309453%2F8796%2Fi%2F450%2Fdepositphotos_87969200-stock-photo-manager-sitting-at-desk-and.jpg&imgrefurl=https%3A%2F%2Fdepositphotos.com%2Ffr%2Fphotos%2Femploy%25C3%25A9-de-bureau.html&docid=tFsQdgTPqOIJAM&tbnid=d-OZA-6iiE6JDM&vet=12ahUKEwiEr4bchZeGAxXsVfEDHYNfDcEQM3oECH0QAA..i&w=600&h=400&hcb=2&ved=2ahUKEwiEr4bchZeGAxXsVfEDHYNfDcEQM3oECH0QAA"
+            "img": "/images/img2.jpg"
         },
         {
             "id": "3",
@@ -25,7 +25,7 @@
             "author": "Emily Johnson",
             "date": "8 March 2024",
             "comments": "18",
-            "img": "https://www.google.com/imgres?q=employe%20image&imgurl=https%3A%2F%2Fst2.depositphotos.com%2F2309453%2F8796%2Fi%2F450%2Fdepositphotos_87969200-stock-photo-manager-sitting-at-desk-and.jpg&imgrefurl=https%3A%2F%2Fdepositphotos.com%2Ffr%2Fphotos%2Femploy%25C3%25A9-de-bureau.html&docid=tFsQdgTPqOIJAM&tbnid=d-OZA-6iiE6JDM&vet=12ahUKEwiEr4bchZeGAxXsVfEDHYNfDcEQM3oECH0QAA..i&w=600&h=400&hcb=2&ved=2ahUKEwiEr4bchZeGAxXsVfEDHYNfDcEQM3oECH0QAA"
+            "img": "/images/mg3.jpg"
         },
         {
             "id": "4",
@@ -34,7 +34,7 @@
             "author": "Michael Brown",
             "date": "29 February 2024",
             "comments": "25",
-            "img": "https://www.google.com/imgres?q=employe%20image&imgurl=https%3A%2F%2Fwww.zinghr.com%2Fwp-content%2Fuploads%2F2020%2F12%2F218-10-1.jpg&imgrefurl=https%3A%2F%2Fwww.zinghr.com%2Femployee-engagement-software%2Fwhy-should-employees-work-like-an-entrepreneur%2F&docid=5sbzbujt5rYa8M&tbnid=f1gWIsu6TwjsyM&vet=12ahUKEwiEr4bchZeGAxXsVfEDHYNfDcEQM3oECF8QAA..i&w=1024&h=600&hcb=2&ved=2ahUKEwiEr4bchZeGAxXsVfEDHYNfDcEQM3oECF8QAA"
+            "img": "/images/img4.jpg"
         },
         {
             "id": "5",
@@ -43,7 +43,7 @@
             "author": "Sarah Lee",
             "date": "5 January 2024",
             "comments": "32",
-            "img": "https://www.google.com/imgres?q=employe%20image&imgurl=https%3A%2F%2Fsimpleleadership.io%2Fwp-content%2Fuploads%2F2015%2F12%2FEmployee.jpg&imgrefurl=https%3A%2F%2Fsimpleleadership.io%2Fhow-do-you-groom-a-high-potential-employee%2F&docid=nLgNsasN-JHDlM&tbnid=Lz83GH6tU1Q03M&vet=12ahUKEwiEr4bchZeGAxXsVfEDHYNfDcEQM3oECFYQAA..i&w=500&h=333&hcb=2&ved=2ahUKEwiEr4bchZeGAxXsVfEDHYNfDcEQM3oECFYQAA"
+            "img": "/images/img5.jpg"
         }
     ]
 }
