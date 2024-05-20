@@ -1,31 +1,32 @@
-const path = require('path');
-const fs = require('fs');
-const ejs = require('ejs');
-const getRootPath = require('../utils/routPath');
-const generateResponse = require('../utils/responseGenerator');
-const { CONTENT_TYPES } = require('../utils/constants');
+const path = require('path')
+const fs = require('fs')
+const ejs = require('ejs')
+const getRootPath = require('./routPath')
+const generateResponse = require('./responseGenerator')
+const { CONTENT_TYPES } = require('./constants')
 
-const loadEjs = async (filename, req, res, datas) => {
-    const filePath = path.join(getRootPath(), "views", "pages", `${filename}.ejs`);
+const loadEjs = (filename, req, res, datas) => {
+    const filePath = path.join(getRootPath(), 'views', 'pages', `${filename}.ejs`)
 
-    fs.readFile(filePath, "utf-8", (err, data) => {
+    fs.readFile(filePath, 'utf-8', (err, data) => {
         if (err) {
             generateResponse({
                 res: res,
                 status: 500,
-                header: CONTENT_TYPES[".txt"],
-                data: "Internal Server Error"
-            });
-        } else {
-            const renderedHtml = ejs.render(data, { rootPath: getRootPath(), ...datas });
+                header: CONTENT_TYPES['.txt'],
+                data: 'Internal Server Error',
+            })
+        }
+        else {
+            const renderedHtml = ejs.render(data, { rootPath: getRootPath(), ...datas })
             generateResponse({
                 res: res,
                 status: 200,
-                header: CONTENT_TYPES[".html"],
+                header: CONTENT_TYPES['.html'],
                 data: renderedHtml
-            });
+            })
         }
-    });
-};
+    })
+}
 
 module.exports = loadEjs;

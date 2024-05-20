@@ -12,10 +12,10 @@ function useAllStaticFiles(req, res, next) {
         }
         else {
             const extname = path.extname(filePath);
-            res.writeHead(200, { "Content-Type": CONTENT_TYPES[extname] || "application/octet-stream" });
+            res.writeHead(200, { "Content-Type": CONTENT_TYPES[extname] || 'application/octet-stream' });
             res.end(content);
         }
     });
 };
 
-module.exports = { useAllStaticFiles };
+module.exports = useAllStaticFiles;

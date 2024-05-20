@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "guli@gmail.com",
+      "username": "guli",
+      "password": "123",
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "email": "test@gmail.com",
+      "username": "test",
+      "password": "$2b$10$u9bLLeTpUctJGRQK6BuSDu40plaxxRGaePtw6tGCJFszOUOUyzLr2",
+      "isActive": true
+    }
+  ]
+}
