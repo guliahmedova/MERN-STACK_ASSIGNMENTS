@@ -9,8 +9,23 @@ const getLogin = (req, res) => {
     loadEjs("login", req, res);
 };
 
-const loginUser = (req, res) => {
-    console.log(req, res);
+const loginUser = async (req, res) => {
+    const body = await parseRequestBody(req);
+    const result = await _authService.verifyUser(body);
+
+    if (result) {
+        res.writeHead(302, {
+            'Location': '/'
+        });
+        res.end();
+    } else {
+        generateResponse({
+            res: res,
+            status: 500,
+            header: CONTENT_TYPES['.json'],
+            data: { error: 'Registration failed' }
+        });
+    }
 };
 
 const getRegister = (req, res) => {
@@ -22,16 +37,19 @@ const registerUser = async (req, res) => {
     const user = new User(body.email, body.username, body.password, true);
     const result = await _authService.signUp(user);
 
-    console.log(`auth-controller/registerUser/result:`, result);
-    console.log(`auth-controller/registerUser/user:`, user);
-    console.log(`auth-controller/registerUser/body:`, body);
-
-    generateResponse({
-        res: res,
-        status: 201,
-        header: CONTENT_TYPES['.json'],
-        data: result
-    });
+    if (result) {
+        res.writeHead(302, {
+            'Location': '/login'
+        });
+        res.end();
+    } else {
+        generateResponse({
+            res: res,
+            status: 500,
+            header: CONTENT_TYPES['.json'],
+            data: { error: 'Registration failed' }
+        });
+    }
 };
 
 module.exports = {

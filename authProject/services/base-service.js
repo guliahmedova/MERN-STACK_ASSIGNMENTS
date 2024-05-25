@@ -26,5 +26,6 @@ async function signUp(jsonKey, model) {
 };
 
 module.exports = {
-    signUp
+    signUp,
+    getAllJsonData
 };
