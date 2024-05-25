@@ -1,24 +1,26 @@
 <%- include(rootPath + '/views/layout/header.ejs' ) %>
+
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-12">
                 <h5 class="text-center">Register Page</h5>
-                <form>
+                <form method="post" action="/register/user">
                     <div class="mb-3">
                         <label for="exampleInputUsername" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="emailHelp">
+                        <input type="text" class="form-control" name="username" id="exampleInputUsername" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="text" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input type="text" class="form-control" name="password" id="exampleInputPassword1">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
     </div>
+
     <%- include(rootPath + '/views/layout/footer.ejs' ) %>

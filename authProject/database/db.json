@@ -11,7 +11,14 @@
       "id": "2",
       "email": "test@gmail.com",
       "username": "test",
-      "password": "$2b$10$u9bLLeTpUctJGRQK6BuSDu40plaxxRGaePtw6tGCJFszOUOUyzLr2",
+      "password": "$2b$10$u5Krtq/4nSDDRkODjl9Z3eCRrPmbmueW.GVh1obJ..qIr8uDjAvG.",
+      "isActive": true
+    },
+    {
+      "id": "3",
+      "email": "test@gmail.com",
+      "username": "nezrin",
+      "password": "$2b$10$Cd43UnV3L0JHnrFyeJPtiuD0O7OEDD2ufS.A0DeIXCF0KF6wTHdIS",
       "isActive": true
     }
   ]

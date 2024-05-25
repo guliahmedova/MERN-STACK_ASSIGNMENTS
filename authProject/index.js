@@ -1,7 +1,7 @@
 const http = require('http');
-const ROUTES = require('./routes/routes')
+const ROUTES = require('./routes/routes');
 const PORT = 4545;
-const useAllStaticFiles = require('./middlewares/staticFileMiddleware')
+const useAllStaticFiles = require('./middlewares/staticFileMiddleware');
 
 const server = http.createServer((req, res) => {
     useAllStaticFiles(req, res, () => {

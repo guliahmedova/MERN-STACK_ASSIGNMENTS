@@ -15,6 +15,10 @@ async function getAllJsonData() {
 
 async function signUp(jsonKey, model) {
     const allData = await getAllJsonData();
+    console.log(`alldata in base-service: ${allData}`);
+    console.log(`jsonkey in base-service: ${jsonKey}`);
+    console.log(`model in base-service: ${model}`);
+    
     const newUser = { "id": generateId(allData[jsonKey]), ...model };
     allData[jsonKey].push(newUser);
     await writeFileAsync(DATABASE_PATH, JSON.stringify(allData, null, 2));
