@@ -1,0 +1,40 @@
+<%- include(rootPath + '/views/layout/dashboardHeader.ejs' ) %>
+
+    <div class="container mt-5">
+        <a href="localhost:4545/dashboard/create" class="btn btn-primary mb-5">Create</a>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Icon</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% datas.forEach(element=> { %>
+                    <tr>
+                        <th scope="row">
+                            <%= element.id %>
+                        </th>
+                        <td>
+                            <%= element.title %>
+                        </td>
+                        <td>
+                            <%= element.desc %>
+                        </td>
+                        <td>
+                            <%= element.icon %>
+                        </td>
+                        <td>
+                            <button class="btn btn-warning">Edit</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </div>
+
+    <%- include(rootPath + '/views/layout/dashboardFooter.ejs' ) %>

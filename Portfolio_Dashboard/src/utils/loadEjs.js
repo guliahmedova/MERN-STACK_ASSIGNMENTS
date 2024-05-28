@@ -6,6 +6,7 @@ const generateResponse = require('./generateRes')
 const { CONTENT_TYPES } = require('./constants');
 
 const loadEjs = (filename, req, res, datas) => {
+    console.log("datas: ", datas);
     const filePath = path.join(getRootPath(), 'views', 'pages', `${filename}.ejs`)
 
     fs.readFile(filePath, 'utf-8', (err, data) => {
@@ -18,7 +19,7 @@ const loadEjs = (filename, req, res, datas) => {
             })
         }
         else {
-            const renderedHtml = ejs.render(data, { rootPath: getRootPath(), ...datas })
+            const renderedHtml = ejs.render(data, { rootPath: getRootPath(), datas })
             generateResponse({
                 res: res,
                 status: 200,

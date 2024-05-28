@@ -4,7 +4,7 @@ const getRootPath = require('../utils/root-path');
 const { CONTENT_TYPES } = require("../utils/constants");
 
 function useAllStaticFiles(req, res, next) {
-    const filePath = path.join(getRootPath(), "public", "assets",  req.url);
+    const filePath = path.join(getRootPath(), "public",  req.url);
 
     fs.readFile(filePath, (err, content) => {
         if (err) {

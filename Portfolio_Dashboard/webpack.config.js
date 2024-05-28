@@ -5,7 +5,7 @@ const _filename = fileURLToPath(import.meta.url);
 const _dirname = path.dirname(_filename);
 
 const config = {
-    entry: ["@babel/polyfill", "/index.js"],
+    entry: ["@babel/polyfill", "./src/index.js"],
     output: {
         path: path.resolve(_dirname, "bundles"),
         filename: "bundle.js"
