@@ -6,9 +6,18 @@ async function getAllCards() {
 };
 
 async function createCard(model) {
-    console.log(`dashboard-service-createCard-model: ${model}`);
     const data = await _baseService.create("cards", model);
     return data;
 };
 
-module.exports = { createCard, getAllCards };
+async function updateCard(cardId, model) {
+    const data = await _baseService.update("cards", model, cardId);
+    return data;
+};
+
+async function deleteCard(cardId) {
+    const data = await _baseService.removeCard("cards", cardId);
+    return data;
+};
+
+module.exports = { createCard, getAllCards, updateCard, deleteCard };

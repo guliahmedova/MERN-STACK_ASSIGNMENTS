@@ -13,6 +13,28 @@ const getCreatePage = (req, res) => {
     loadEjs("create", req, res);
 };
 
+const getUpdatePage = async (req, res) => {
+    const { url } = req;
+    const id = url.split("/")[3];
+    const cardId = id.replace("/", "");
+
+    const cards = await _dashboardService.getAllCards();
+    const card = cards.find(c => c.id === cardId);
+
+    console.log("getUpdatePage card", card);
+
+    if (card) {
+        loadEjs("update", req, res, card);
+    } else {
+        generateResponse({
+            res: res,
+            status: 500,
+            header: CONTENT_TYPES['.json'],
+            data: { error: 'update failed' }
+        });
+    }
+};
+
 const createCard = async (req, res) => {
     const body = await parseRequestBody(req);
     const card = new Card(body.title, body.desc, body.icon);
@@ -28,9 +50,54 @@ const createCard = async (req, res) => {
             res: res,
             status: 500,
             header: CONTENT_TYPES['.json'],
-            data: { error: 'Registration failed' }
+            data: { error: 'Create failed' }
         });
     }
 };
 
-module.exports = { getDashboard, getCreatePage, createCard };
+const updateCard = async (req, res) => {
+    const { url } = req;
+    const id = url.split("/")[3];
+    const cardId = id.replace("/", "");
+
+    const body = await parseRequestBody(req);
+    const updatedCard = await _dashboardService.updateCard(cardId, body);
+
+    if (updatedCard) {
+        res.writeHead(302, {
+            'Location': '/dashboard'
+        });
+        res.end();
+    } else {
+        generateResponse({
+            res: res,
+            status: 500,
+            header: CONTENT_TYPES['.json'],
+            data: { error: 'Update failed' }
+        });
+    }
+};
+
+const deleteCard = async (req, res) => {
+    const { url } = req;
+    const id = url.split("/")[3];
+    const cardId = id.replace("/", "");
+
+    const deletedCard = await _dashboardService.deleteCard(cardId);
+
+    if (deletedCard) {
+        res.writeHead(302, {
+            'Location': '/dashboard'
+        });
+        res.end();
+    } else {
+        generateResponse({
+            res: res,
+            status: 500,
+            header: CONTENT_TYPES['.json'],
+            data: { error: 'Card was not found' }
+        });
+    }
+};
+
+module.exports = { getDashboard, getCreatePage, getUpdatePage, createCard, updateCard, deleteCard };

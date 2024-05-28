@@ -21,4 +21,36 @@ async function create(jsonKey, model) {
     return newCard;
 };
 
-module.exports = { getAllJsonData, create };
+async function update(jsonKey, model, id) {
+    const allData = await getAllJsonData();
+    const updatedCard = model;
+
+    allData[jsonKey].map((card) => {
+        if (card.id === id) {
+            card.title = updatedCard.title;
+            card.desc = updatedCard.desc;
+            card.icon = updatedCard.icon;
+        }
+    });
+
+    await writeFileAsync(DATABASE_PATH, JSON.stringify(allData, null, 2));
+    const singleCard = allData[jsonKey].find((card) => card.id === id);
+
+    if (singleCard) {
+        return singleCard;
+    } else {
+        throw new Error("Not Found");
+    }
+};
+
+async function removeCard(jsonKey, id) {
+    const allData = await getAllJsonData();
+    const deleteCard = allData[jsonKey].find((card) => card.id === id);
+
+    const indexDeleteCard = allData[jsonKey].indexOf(deleteCard);
+    allData[jsonKey].splice(indexDeleteCard, 1);
+    await writeFileAsync(DATABASE_PATH, JSON.stringify(allData, null, 2));
+    return deleteCard;
+};
+
+module.exports = { getAllJsonData, create, update, removeCard };
