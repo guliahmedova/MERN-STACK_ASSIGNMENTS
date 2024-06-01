@@ -1,9 +1,9 @@
 const HOME_ENDPOINT = "/";
 const DASHBOARD_ENDPOINT = "/dashboard";
 const DASHBOARD_CREATE_ENDPOINT = "/dashboard/create";
+const DASHBOARD_CREATE_ACTİON_ENDPOINT = "/dashboard/createCard";
 const DASHBOARD_UPDATE_ENDPOINT = "/dashboard/update/";
 const DASHBOARD_UPDATE_ACTİON_ENDPOINT = "/dashboard/updateCard/";
-const DASHBOARD_CREATE_ACTİON_ENDPOINT = "/dashboard/createCard";
 const DASHBOARD_DELETE_ACTİON_ENDPOINT = "/dashboard/deleteCard/";
 
 module.exports = {

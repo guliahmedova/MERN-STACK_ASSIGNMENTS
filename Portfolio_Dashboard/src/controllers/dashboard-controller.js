@@ -5,7 +5,6 @@ const Card = require('../models/card');
 
 const getDashboard = async (req, res) => {
     const cards = await _dashboardService.getAllCards();
-    console.log("cards: ", cards);
     loadEjs("dashboard", req, res, cards);
 };
 

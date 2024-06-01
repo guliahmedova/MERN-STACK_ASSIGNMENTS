@@ -28,6 +28,6 @@ const loadEjs = (filename, req, res, datas) => {
             })
         }
     })
-}
+};
 
 module.exports = loadEjs;
