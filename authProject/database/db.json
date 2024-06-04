@@ -20,13 +20,6 @@
       "username": "nezrin",
       "password": "$2b$10$Cd43UnV3L0JHnrFyeJPtiuD0O7OEDD2ufS.A0DeIXCF0KF6wTHdIS",
       "isActive": true
-    },
-    {
-      "id": "4",
-      "email": "fatime@gmail.com",
-      "username": "fatime",
-      "password": "$2b$10$d2sAXBaevcBBnHcsyh8BMeoINeQZdMsJ1f7fgpjbUjeW4ovcvLC0m",
-      "isActive": true
     }
   ]
 }

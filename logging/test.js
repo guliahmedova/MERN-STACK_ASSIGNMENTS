@@ -6,7 +6,7 @@ const newTestMethod = async () => {
     try {
         // Telegram
         // throw new Error();
-
+        
         // Discord
         // const _logger = new Logger(LOGGING_TYPES.WARNING);
         // await _logger.log(new LogModel({

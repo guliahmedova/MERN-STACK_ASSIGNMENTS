@@ -1,34 +1,7 @@
 {
   "cards": [
     {
-      "id": "1",
-      "title": "m",
-      "desc": "desctest",
-      "icon": "fa-solid fa-address-card"
-    },
-    {
-      "id": "2",
-      "title": "Car",
-      "desc": "In publishing and graphic design, Lorem ipsum is a placeholder t",
-      "icon": "fa-solid fa-address-card"
-    },
-    {
-      "id": "3",
-      "title": "Shopping",
-      "desc": "In publishing and graphic design, Lorem ipsum is a placeholder t",
-      "icon": "fa-solid fa-address-card"
-    },
-    {
-      "id": "4",
-      "title": "hello everyone",
-      "desc": "salammmmm",
-      "icon": "fa-solid fa-address-card"
-    },
-    {
-      "id": "5",
-      "title": "skjnkjndkjn",
-      "desc": "kjsndkdjbnk",
-      "icon": "kjdfkfb"
+      "id": "1"
     }
   ]
 }

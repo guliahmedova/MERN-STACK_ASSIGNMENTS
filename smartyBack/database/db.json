@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "Tris123",
+      "firstname": "tris smith",
+      "lastname": "tris123@gmail.com",
+      "password": "$2b$10$i8yMDfCbm7O5yqUG/le1UuC4CphUvi4wSxWvJxptbBaNWLXeRz/Oe",
+      "confirmpassword": "$2b$10$9EQYiIZ2tBrw6YMAhcVEOOk2PkoxZFZgmbBPsNdYudFbvU.0kBsHO"
+    }
+  ]
+}

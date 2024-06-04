@@ -6,7 +6,6 @@ async function signUp(model) {
     const saltRounds = 10;
     const saltKey = await bcyrpt.genSalt(saltRounds);
     model.password = await bcyrpt.hash(model.password, saltKey);
-
     const data = await baseService.signUp("users", model);
     return data;
 };
