@@ -10,10 +10,10 @@
     },
     {
       "id": "3",
-      "email": "guliehmedova19@gmail.com",
-      "fullName": "Gulu ahmedoba",
-      "userName": "gulu2001",
-      "password": "$2b$10$Iho2nUeX0TcVm6dQegE9aOWqn84q1rX96fnVrktK9/k1NLKQMPrmS",
+      "email": "test@gmail.com",
+      "fullName": "Testttt",
+      "userName": "Test12",
+      "password": "$2b$10$oDM0EdrGsBLE2DubbeYTUOm3.22OYLmnyg29OeijrL8yf6xcVM8Ma",
       "isActive": true
     }
   ]
