@@ -1,0 +1,90 @@
+{
+    "user": [
+        {
+            "id": 1,
+            "fullName": "Guli Ahmedova",
+            "desc": "Hello, I am a Frontend Developer",
+            "professions": [
+                "Frontend Developer",
+                "MERN-Stack Developer"
+            ]
+        }
+    ],
+    "about": [
+        {
+            "desc": "Hello, I am a Frontend Developer"
+        }
+    ],
+    "services": [
+        {
+            "id": "1",
+            "title": "Creative Design",
+            "desc": "Lorem Ipsum simply text of the printing and type setting industry when an unknown printing simply"
+        },
+        {
+            "id": "2",
+            "title": "Clean Code",
+            "desc": "Lorem Ipsum simply text of the printing and type setting industry when an unknown printing simply"
+        },
+        {
+            "id": "3",
+            "title": "Creative Design",
+            "desc": "Lorem Ipsum simply text of the printing and type setting industry when an unknown printing simply"
+        }
+    ],
+    "analisis": [
+        {
+            "count": 100,
+            "desc": "People"
+        },
+        {
+            "count": 200,
+            "desc": "Animals"
+        },
+        {
+            "count": 500,
+            "desc": "People"
+        },
+        {
+            "count": 400,
+            "desc": "Animals"
+        }
+    ],
+    "testimonials": [
+        {
+            "desc": "Desc 1",
+            "title": "Guli",
+            "job": "Frontend Dev"
+        },
+        {
+            "desc": "Desc 2",
+            "title": "Joe",
+            "job": "Backend Dev"
+        },
+        {
+            "desc": "Desc 3",
+            "title": "Smith",
+            "job": "Full-stack Dev"
+        }
+    ],
+    "blogs": [
+        {
+            "title": "Title 1",
+            "author": "By Dorian Gray",
+            "date": "Jun 27, 2018",
+            "desc": "Desc1"
+        },
+        {
+            "title": "Title 2",
+            "author": "By Dorian Gray",
+            "date": "Jun 27, 2028",
+            "desc": "Desc2"
+        },
+        {
+            "title": "Title 3",
+            "author": "By Dorian Gray",
+            "date": "Jun 27, 2038",
+            "desc": "Desc3"
+        }
+    ]
+}
