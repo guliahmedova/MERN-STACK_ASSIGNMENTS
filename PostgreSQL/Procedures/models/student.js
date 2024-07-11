@@ -14,7 +14,12 @@ class Student {
             students.push(student);
         }
         return students;
-    }
+    };
+
+    static mapOne(row) {
+        const student = new Student(row);
+        return student;
+    };
 }
 
 module.exports = Student;

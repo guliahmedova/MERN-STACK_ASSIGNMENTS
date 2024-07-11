@@ -1,0 +1,28 @@
+-- CREATE OR REPLACE FUNCTION FUNC_GETSTUDENTHIER(PARAM_ID INTEGER) 
+-- RETURNS TABLE (ID INTEGER, NAME VARCHAR, AGE INTEGER) 
+-- LANGUAGE plpgsql
+-- AS $$ 
+-- BEGIN 
+-- RETURN QUERY 
+-- WITH RECURSIVE student_a as (
+-- 	SELECT s.id,  s.name, s.age FROM students s
+-- 	WHERE s.id = PARAM_ID
+-- )
+-- SELECT * FROM student_a;
+-- END 
+-- $$
+
+
+-- SELECT * FROM FUNC_GETSTUDENTHIER(1);
+
+select * from students 
+
+
+
+
+
+
+
+
+
+

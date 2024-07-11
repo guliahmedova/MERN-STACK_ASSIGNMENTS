@@ -6,13 +6,30 @@ const getAllStudent = async () => {
     return Student.mapAll(res.rows);
 };
 
+const getStudentById = async id => {
+    const res = await pool.query('select * from students s where s.id = $1 and s.deleted = false', [id]);
+    return Student.mapOne(res.rows[0]);
+};
+
+const getStudentByHier = async id => {
+    const res = await pool.query('SELECT * FROM FUNC_GETSTUDENTHIER($1);', [id]);
+    return Student.mapAll(res.rows);
+};
+
 const addStudent = async student => {
     await pool.query(`CALL ADD_STUDENT($1, $2, $3, $4);`, [student.name, student.age, student.grade, student.enrollmentDate]);
 };
 
+const deleteStudent = async id => {
+    await pool.query(`CALL DELETE_STUDENT ($1, $2, $3, $4);`, [student.name, student.age, student.grade, student.enrollmentDate]);
+};
+
 module.exports = {
     getAllStudent,
-    addStudent
+    getStudentById,
+    getStudentByHier,
+    addStudent,
+    deleteStudent
 }; 
 
 // CREATE OR REPLACE PROCEDURE ADD_STUDENT (
