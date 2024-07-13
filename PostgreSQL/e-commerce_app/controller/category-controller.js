@@ -1,4 +1,3 @@
-const Category = require('../models/category');
 const CategoryAddDto = require('../models/categoryAdd');
 const categoryService = require('../services/category-service');
 
