@@ -42,7 +42,7 @@ const getUserByStatus = async (status, id) => {
 
 const getUserByUsername = async username => {
     try {
-        const res = await pool.query('SELECT * FROM users u where u.deleted = 0 and u.username = $2', [username]);
+        const res = await pool.query('SELECT * FROM users u where u.deleted = 0 and u.username = $1', [username]);
         return new SuccessResult(GET_SUCCESS, res.rows[0]);
     } catch (error) {
         return new ErrorResult(error.message);

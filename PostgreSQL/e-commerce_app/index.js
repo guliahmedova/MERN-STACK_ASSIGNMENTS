@@ -1,17 +1,16 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const categoryRouter = require('./routes/category-route');
-const userRouter = require('./routes/user-route');
-const app = express();
+const appRouter = require('./routes');
 dotenv.config();
+
+const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const PORT = process.env.PORT || 3002;
+app.use('/api', appRouter);
 
-app.use('/categories', categoryRouter);
-app.use('/users', userRouter);
+const PORT = process.env.PORT || 3002;
 
 app.listen(PORT, () => {
     console.log('serves listens port: ', PORT);
