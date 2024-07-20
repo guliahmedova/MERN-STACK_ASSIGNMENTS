@@ -1,3 +1,6 @@
-Create Login logic with JWT (Access token) (keep in mind Validations - Username, Password validations)
-And use user endpoints with this middleware
-    
+1. Add country
+2. Update Country 
+3. Delete Country
+4. Get all
+
+(When you work with add and update logic firstly you must get add and update page)
