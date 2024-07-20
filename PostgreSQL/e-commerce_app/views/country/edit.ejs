@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+    <div class="card mt-3">
+        <div class="card-header">
+            <div class="card-title">
+                <h2>Edit Country</h2>
+            </div>
+        </div>
+        <div class="card-body">
+            <form action="/countries/<%= data.id %>" method="post">
+                <div class="row mx-0 mt-3">
+                    <div class="col-4">
+                        <label for="sortCode">Sort Code</label>
+                        <input type="text" name="sort_code" id="sortCode" value="<%= data.sort_code %>"
+                            placeholder="Sort Code">
+                    </div>
+                    <div class="col-4">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Name" value="<%= data.name %>">
+                    </div>
+                    <button type="submit">Edit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>

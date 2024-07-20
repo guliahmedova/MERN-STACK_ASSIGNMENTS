@@ -22,12 +22,7 @@ const login = async (userLoginDto) => {
         return new ErrorResult(USER_DEACTIVE_ERROR);
     };
 
-    console.log('User provided password:', userLoginDto.password);
-    console.log('Stored hashed password:', existUsername.data.password);
-
     const passwordResult = await bcrypt.compare(userLoginDto.password, existUsername.data.password);
-
-    console.log('Password comparison result:', passwordResult);
 
     if (!passwordResult) {
         return new ErrorResult(PASSWORD_INCORRECT_ERROR);

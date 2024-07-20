@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+    <div class="card mt-3">
+        <div class="card-header">
+            <div class="card-title">
+                <h2>Add Country</h2>
+            </div>
+        </div>
+        <div class="card-body">
+            <form action="/countries/add" method="post">
+                <div class="row mx-0 mt-3">
+                    <div class="col-4">
+                        <label for="sortCode">Sort Code</label>
+                        <input type="text" name="sort_code" id="sortCode" placeholder="Sort Code">
+                    </div>
+                    <div class="col-4">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Name">
+                    </div>
+                    <button>Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>
