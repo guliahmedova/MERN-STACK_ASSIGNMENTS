@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+    <div class="container my-5">
+        <div class="row">
+            <% data.forEach(element=> { %>
+                <div class="col-lg-3 mb-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= element.title %>
+                            </h5>
+                            <p class="card-text">
+                                <%= element.subtitle %>
+                            </p>
+                            <a href="/<%= element.id %>" class="btn btn-primary">Go Blog Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>

@@ -24,7 +24,7 @@ const addCategory = async (req, res) => {
 
 const updateCategory = async (req, res) => {
     const { id } = req.params;
-    const category = { id, ...req.body }; 
+    const category = { id, ...req.body };
     await categoryService.updateCategory(category);
     res.status(200).json({ message: "Category has been updated successfully" });
 };
@@ -37,7 +37,7 @@ const deleteCategory = async (req, res) => {
 module.exports = {
     getAllCategories,
     getCategoryById,
-    getCategoryByHierarchy, 
+    getCategoryByHierarchy,
     addCategory,
     updateCategory,
     deleteCategory

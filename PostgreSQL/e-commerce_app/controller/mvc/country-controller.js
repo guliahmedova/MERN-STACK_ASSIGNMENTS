@@ -47,7 +47,6 @@ const editCountry = async (req, res) => {
     };
 };
 
-
 const deleteCountry = async (req, res) => {
     const { id } = req.params;
     try {

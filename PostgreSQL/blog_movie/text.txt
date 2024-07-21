@@ -1,11 +1,14 @@
 Full Blog/Movie project with Express, Ejs, PostgreSQL
 
 
-1. Blog page (like home page and will make with EJS)
-2. Blog detail Page (Each blog detail with ejs)
-3. Login/Register (Token məsələsi header-da göndərilməlidir və onu da ancaq Postman-da edirik deyə token məsələsinə ehtiyac yoxdur)
+1. Blog page (like home page and will make with EJS) +
+2. Blog detail Page (Each blog detail with ejs) +
+
+3. Login/Register (Token məsələsi header-da göndərilməlidir və onu da ancaq Postman-da edirik deyə token məsələsinə ehtiyac yoxdur) +
+
 4. Simple Admin part for create, add, update and delete Blog
-_
+
+
 EXTRA:
 
 If user dont register in site he can't see Admin(Dashboard) part in Navbar also he can't open the url.
