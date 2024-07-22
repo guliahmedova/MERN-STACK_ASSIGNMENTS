@@ -21,6 +21,8 @@ const getBlogEditView = async (req, res) => {
 
     const blog = result.data.find(b => b.id == id);
 
+    console.log("salam", blog);
+
     if (result.success) {
         res.render('admin/edit', { data: blog });
     } else {
@@ -44,11 +46,34 @@ const createBlog = async (req, res) => {
 const editBlog = async (req, res) => {
     const { id } = req.params;
     const blog = { id, ...req.body };
-    const result = await adminService.updateBlog(blog);
+    console.log(blog);
+    const result = await adminService.editBlog(blog);
+
+    console.log(result);
 
     if (result.success) {
-        res.redirect('/');
-    };
+        res.redirect('/dashboard/home');
+        console.log(result, "if");
+    } else {
+        console.log(result, "else");
+        res.render('admin/edit', { data: blog, error: result.message });
+    }
+};
+
+const deleteBlog = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const result = await adminService.deleteBlog(id);
+
+        if (result.success) {
+            res.redirect('/dashboard/home');
+        } else {
+            res.redirect('/dashboard/home', { error: result.message });
+        }
+    } catch (error) {
+        console.error('Delete Blog Error:', error);
+        res.redirect('/dashboard/home', { error: 'An error occurred while deleting the blog.' });
+    }
 };
 
 module.exports = {
@@ -56,5 +81,6 @@ module.exports = {
     getBlogAddView,
     createBlog,
     getBlogEditView,
-    editBlog
+    editBlog,
+    deleteBlog
 };

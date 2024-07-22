@@ -18,7 +18,7 @@ const createBlog = async (blog) => {
     return new SuccessResult(CREATE_SUCCESS, res.rows[0]);
 };
 
-const updateBlog = async (blog) => {
+const editBlog = async (blog) => {
     const res = await pool.query('UPDATE blogs SET title = $1, subtitle = $2 WHERE id = $3 RETURNING *', [blog.title, blog.subtitle, blog.id]);
     return new SuccessResult(UPDATE_SUCCESS, res.rows[0]);
 };
@@ -32,6 +32,6 @@ module.exports = {
     getAllBlogs,
     getBlogById,
     createBlog,
-    updateBlog,
+    editBlog,
     deleteBlog
 };

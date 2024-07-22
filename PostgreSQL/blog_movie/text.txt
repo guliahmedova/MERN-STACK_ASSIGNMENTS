@@ -6,7 +6,7 @@ Full Blog/Movie project with Express, Ejs, PostgreSQL
 
 3. Login/Register (Token məsələsi header-da göndərilməlidir və onu da ancaq Postman-da edirik deyə token məsələsinə ehtiyac yoxdur) +
 
-4. Simple Admin part for create, add, update and delete Blog
+4. Simple Admin part for create, add, update and delete Blog +
 
 
 EXTRA:

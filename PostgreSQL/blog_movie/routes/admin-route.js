@@ -10,4 +10,6 @@ router.post('/add', adminController.createBlog);
 router.get('/edit/:id', adminController.getBlogEditView); 
 router.put('/edit/:id', adminController.editBlog);
 
+router.post('/delete/:id', adminController.deleteBlog); 
+
 module.exports = router;

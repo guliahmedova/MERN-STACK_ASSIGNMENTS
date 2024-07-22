@@ -26,7 +26,7 @@ const login = async (req, res) => {
     const result = await authService.login(userLoginDto);
 
     if (result.success) {
-        res.redirect('/dashbord');
+        res.redirect('/dashboard/home');
     } else {
         res.render('auth/login', { error: result.message });
     }

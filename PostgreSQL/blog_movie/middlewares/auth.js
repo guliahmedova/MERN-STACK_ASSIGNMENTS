@@ -5,12 +5,12 @@ const authUser = (req, res, next) => {
     const token = authHeader && authHeader.split(' ')[1];
 
     if (!token) {
-        return res.sendStatus(401);
+        return res.redirect('/auth/login');
     }
 
     jwt.verify(token, process.env.JWT_SECRET_KEY, (err, user) => {
         if (err) {
-            res.sendStatus(401);
+            return res.redirect('/auth/login'); 
         } else {
             req.user = user;
             next();
