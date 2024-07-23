@@ -46,16 +46,11 @@ const createBlog = async (req, res) => {
 const editBlog = async (req, res) => {
     const { id } = req.params;
     const blog = { id, ...req.body };
-    console.log(blog);
     const result = await adminService.editBlog(blog);
-
-    console.log(result);
 
     if (result.success) {
         res.redirect('/dashboard/home');
-        console.log(result, "if");
     } else {
-        console.log(result, "else");
         res.render('admin/edit', { data: blog, error: result.message });
     }
 };

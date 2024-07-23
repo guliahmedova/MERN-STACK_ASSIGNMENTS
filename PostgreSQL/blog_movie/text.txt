@@ -1,4 +1,4 @@
-Full Blog/Movie project with Express, Ejs, PostgreSQL
+Full Blog project with Express, Ejs, PostgreSQL
 
 
 1. Blog page (like home page and will make with EJS) +
